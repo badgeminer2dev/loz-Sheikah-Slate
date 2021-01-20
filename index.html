@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Appending an Element</title>
+		<script>
+			function addParagraph(){
+				
+				//create a new <p> element
+				var newPDiv = document.createElement("p");
+				
+				//create the content for the <p> element
+				var pContent = document.createTextNode("I'm a new paragraph!");
+				
+				//add the content to the <p> element
+				newPDiv.appendChild(pContent);
+				
+				//get the container <div>
+				var containerDiv = document.getElementById("container");
+				
+				//add the <p> element to the <div>
+				containerDiv.appendChild(newPDiv);
+			}
+		</script>
+	</head>
+	<body>
+		<p onclick="addParagraph()">Click to add a p tag below.</p>
+		<div id="container"></div>
+	</body>
+</html>
